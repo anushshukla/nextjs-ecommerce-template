@@ -75,16 +75,31 @@ const ShopDetails = () => {
 
   const colors = ["red", "blue", "orange", "pink", "purple"];
 
-  const alreadyExist = localStorage.getItem("productDetails");
   const productFromStorage = useAppSelector(
     (state) => state.productDetailsReducer.value
   );
-
-  const product = alreadyExist ? JSON.parse(alreadyExist) : productFromStorage;
+  const [product, setProduct] = useState(productFromStorage);
 
   useEffect(() => {
-    localStorage.setItem("productDetails", JSON.stringify(product));
-  }, [product]);
+    if (typeof window === "undefined") return;
+
+    try {
+      const stored = window.localStorage.getItem("productDetails");
+
+      if (stored) {
+        setProduct(JSON.parse(stored));
+      } else {
+        setProduct(productFromStorage);
+      }
+
+      window.localStorage.setItem(
+        "productDetails",
+        JSON.stringify(productFromStorage)
+      );
+    } catch {
+      setProduct(productFromStorage);
+    }
+  }, [productFromStorage]);
 
   // pass the product here when you get the real data.
   const handlePreviewSlider = () => {
