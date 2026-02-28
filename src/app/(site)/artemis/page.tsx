@@ -15,7 +15,7 @@ export default function ArtemisPage() {
         nonce="456723789323765435"
         strategy="beforeInteractive"
         dangerouslySetInnerHTML={{
-          __html: "window.startTime=performance.now();_vwo_cookieDomain='nextjs-ecommerce-template-ruddy.vercel.app';",
+          __html: "window.startTime=performance.now();/*_vwo_cookieDomain='nextjs-ecommerce-template-ruddy.vercel.app'*/;",
         }}
       />
       <Script
