@@ -20,7 +20,7 @@ export default function ArtemisPage() {
       />
       <Script
         id="artemis-script"
-        src="https://dacdn.abtasty.com/js/4002332.js"
+        src="https://dacdn.abtasty.com/js/4001222.js"
         nonce="456723789323765435"
         strategy="afterInteractive"
       />
