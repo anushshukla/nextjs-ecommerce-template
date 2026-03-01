@@ -10,20 +10,6 @@ export const metadata: Metadata = {
 export default function ArtemisPage() {
   return (
     <>
-      {/* <Script
-        id="artemis-start-time"
-        nonce="456723789323765435"
-        strategy="beforeInteractive"
-        dangerouslySetInnerHTML={{
-          __html: "window.startTime=performance.now();/*_vwo_cookieDomain='nextjs-ecommerce-template-ruddy.vercel.app';",
-        }}
-      />
-      <Script
-        id="artemis-script"
-        src="https://dacdn.abtasty.com/cloud-run-testing/final/4001222.js"
-        nonce="456723789323765435"
-        strategy="afterInteractive"
-      /> */}
       <Home />
     </>
   );

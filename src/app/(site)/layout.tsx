@@ -32,7 +32,7 @@ export default function RootLayout({
               id="artemis-start-time"
               nonce="456723789323765435"
               dangerouslySetInnerHTML={{
-                __html: "window.startTime=performance.now();/*_vwo_cookieDomain='nextjs-ecommerce-template-ruddy.vercel.app'*/;",
+                __html: `window.startTime=performance.now();/*_vwo_cookieDomain='nextjs-ecommerce-template-ruddy.vercel.app'*/;`,
               }}
             />
             <script
