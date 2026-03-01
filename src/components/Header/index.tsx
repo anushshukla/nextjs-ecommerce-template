@@ -184,7 +184,7 @@ const Header = () => {
                     <span className="block text-2xs text-dark-4 uppercase">
                       account
                     </span>
-                    <p className="font-medium text-custom-sm text-dark">
+                    <p className="font-medium text-custom-sm text-dark" id="login-link">
                       Sign In
                     </p>
                   </div>
