@@ -22,27 +22,45 @@ export default function RootLayout({
 }) {
   const pathname = usePathname();
   const isArtemisPage = pathname === '/artemis';
+  const isAbtastyPage = pathname === '/abtasty';
 
   return (
     <html lang="en" suppressHydrationWarning={true}>
       <head>
-        {isArtemisPage && (
-          <>
-            <script
-              id="artemis-start-time"
-              nonce="456723789323765435"
-              dangerouslySetInnerHTML={{
-                __html: `window.startTime=performance.now();/*_vwo_cookieDomain='nextjs-ecommerce-template-ruddy.vercel.app'*/;`,
-              }}
-            />
-            <script
-              nonce="456723789323765435"
-              referrerPolicy="no-referrer-when-downgrade"
-              src="https://dacdn.abtasty.com/cloud-run-testing/final/4001222.js"
-              id="vwoCode"
-            />
-          </>
-        )}
+          {isArtemisPage && (
+            <>
+              <script
+                id="artemis-start-time"
+                nonce="456723789323765435"
+                dangerouslySetInnerHTML={{
+                  __html: `window.startTime=performance.now();/*_vwo_cookieDomain='nextjs-ecommerce-template-ruddy.vercel.app'*/;`,
+                }}
+              />
+              <script
+                nonce="456723789323765435"
+                referrerPolicy="no-referrer-when-downgrade"
+                src="https://dacdn.abtasty.com/cloud-run-testing/final/4001222.js"
+                id="vwoCode"
+              />
+            </>
+          )}
+          {isAbtastyPage && (
+            <>
+              <script
+                id="abtasty-start-time"
+                nonce="456723789323765435"
+                dangerouslySetInnerHTML={{
+                  __html: "window.startTime=performance.now();",
+                }}
+              />
+              <script
+                nonce="456723789323765435"
+                referrerPolicy="no-referrer-when-downgrade"
+                src="https://try.abtasty.com/84cd1e2faac83d8b7a70cec0a42ad05e.js"
+                id="abtasty-script"
+              />
+            </>
+          )}
       </head>
       <body>
         <ReduxProvider>
