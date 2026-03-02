@@ -5,7 +5,7 @@ const BASE_CSP =
   "default-src 'self' *.abtasty.com; script-src 'self' 'unsafe-inline' *.abtasty.com; frame-src 'self'; connect-src 'self' *.abtasty.com; style-src 'self' 'unsafe-inline' *.abtasty.com; font-src 'self' data:;";
 
 const VWO_CSP =
-  "default-src 'self' blob: dev.visualwebsiteoptimizer.com; script-src 'self' 'unsafe-inline' dev.visualwebsiteoptimizer.com; connect-src 'self' dev.visualwebsiteoptimizer.com; frame-src 'self'; style-src 'self' 'unsafe-inline'; font-src 'self' data:;";
+  "default-src 'self' unsafe-inlineblob: *.visualwebsiteoptimizer.com;";
 
 export function middleware(req: NextRequest) {
   const res = NextResponse.next();
