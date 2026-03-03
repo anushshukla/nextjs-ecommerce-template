@@ -7,7 +7,8 @@ const BASE_CSP =
 export function middleware(req: NextRequest) {
   const res = NextResponse.next();
 
-  const isVwoPath = req.nextUrl.pathname === "/vwo";
+  const isVwoPath =
+    req.nextUrl.pathname === "/vwo" || req.nextUrl.pathname === "/vwo-sync";
   if (isVwoPath) {
     return res;
   }
