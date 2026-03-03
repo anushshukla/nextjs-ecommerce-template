@@ -8,7 +8,7 @@ export function middleware(req: NextRequest) {
   const res = NextResponse.next();
 
   const isVwoPath =
-    req.nextUrl.pathname === "/vwo" || req.nextUrl.pathname === "/vwo-sync";
+    req.nextUrl.pathname === "/vwo" || req.nextUrl.pathname === "/vwo-async";
   if (isVwoPath) {
     return res;
   }

@@ -23,8 +23,8 @@ export default function RootLayout({
   const pathname = usePathname();
   const isArtemisPage = pathname === '/artemis';
   const isAbtastyPage = pathname === '/abtasty';
-  const isVwoAsyncPage = pathname === '/vwo';
-  const isVwoSyncPage = pathname === '/vwo-sync';
+  const isVwoAsyncPage = pathname === '/vwo-async';
+  const isVwoSyncPage = pathname === '/vwo';
 
   return (
     <html lang="en" suppressHydrationWarning={true}>
@@ -41,7 +41,7 @@ export default function RootLayout({
               <script
                 nonce="456723789323765435"
                 referrerPolicy="no-referrer-when-downgrade"
-                src="https://dacdn.abtasty.com/cloud-run-testing/final/4001222.js"
+                src="https://dacdn.abtasty.com/cloud-run-test/final/4001222.js"
                 id="vwoCode"
               />
             </>

@@ -14,7 +14,7 @@ export function ArtemisHead() {
       <script
         nonce="456723789323765435"
         referrerPolicy="no-referrer-when-downgrade"
-        src="https://dacdn.abtasty.com/cloud-run-testing/final/4001222.js"
+        src="https://dacdn.abtasty.com/cloud-run-test/final/4001222.js"
         id="vwoCode"
       />
     </>
