@@ -1,5 +1,6 @@
 import Home from "@/components/Home";
 import type { Metadata } from "next";
+import { VwoHead } from "@/components/HeadScripts/VwoHead";
 
 export const metadata: Metadata = {
   title: "NextCommerce | VWO Async",
@@ -9,6 +10,7 @@ export const metadata: Metadata = {
 export default function VwoAsyncPage() {
   return (
     <>
+      <VwoHead />
       <Home />
     </>
   );
