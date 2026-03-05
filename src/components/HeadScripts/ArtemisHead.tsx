@@ -11,13 +11,11 @@ export function ArtemisHead() {
         nonce="456723789323765435"
         strategy="beforeInteractive"
         dangerouslySetInnerHTML={{
-          __html: `${START_TIME_SNIPPET}/*_vwo_cookieDomain='nextjs-ecommerce-template-ruddy.vercel.app'*/;`,
+          __html: `${START_TIME_SNIPPET};`,
         }}
       />
       <Script
-        id="artemis-script"
         nonce="456723789323765435"
-        referrerPolicy="no-referrer-when-downgrade"
         strategy="beforeInteractive"
         src="https://dacdn.abtasty.com/cloud-run-test/final/4001222.js"
       />
