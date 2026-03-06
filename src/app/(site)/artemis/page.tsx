@@ -1,6 +1,5 @@
 import Home from "@/components/Home";
 import type { Metadata } from "next";
-import { ArtemisHead } from "@/components/HeadScripts/ArtemisHead";
 
 export const metadata: Metadata = {
   title: "NextCommerce | Artemis",
@@ -8,11 +7,6 @@ export const metadata: Metadata = {
 };
 
 export default function ArtemisPage() {
-  return (
-    <>
-      <ArtemisHead />
-      <Home />
-    </>
-  );
+  return <Home />;
 }
 

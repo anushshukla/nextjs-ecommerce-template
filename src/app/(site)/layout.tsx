@@ -13,15 +13,25 @@ import { PreviewSliderProvider } from "../context/PreviewSliderContext";
 import PreviewSliderModal from "@/components/Common/PreviewSlider";
 
 import ScrollToTop from "@/components/Common/ScrollToTop";
+import { usePathname } from "next/navigation";
+import { ArtemisHead } from "@/components/HeadScripts/ArtemisHead";
+import { AbtastyHead } from "@/components/HeadScripts/AbtastyHead";
+import { VwoSyncHead } from "@/components/HeadScripts/VwoSyncHead";
 
 export default function RootLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
+  const pathname = usePathname();
+
   return (
     <html lang="en" suppressHydrationWarning={true}>
-      <head />
+      <head>
+        {pathname === "/artemis" && <ArtemisHead />}
+        {pathname === "/abtasty" && <AbtastyHead />}
+        {pathname === "/vwo" && <VwoSyncHead />}
+      </head>
       <body>
         <ReduxProvider>
           <CartModalProvider>
