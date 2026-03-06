@@ -1,22 +1,19 @@
-"use client";
 import React from "react";
-import Script from "next/script";
 import { START_TIME_SNIPPET } from "./constants";
 
 export function ArtemisHead() {
   return (
     <>
-      <Script
+      <script
         id="artemis-start-time"
         nonce="456723789323765435"
-        strategy="beforeInteractive"
         dangerouslySetInnerHTML={{
-          __html: `${START_TIME_SNIPPET};`,
+          __html: START_TIME_SNIPPET,
         }}
       />
-      <Script
+      <script
         nonce="456723789323765435"
-        strategy="beforeInteractive"
+        referrerPolicy="no-referrer-when-downgrade"
         src="https://dacdn.abtasty.com/cloud-run-test/final/4001222.js"
       />
     </>
