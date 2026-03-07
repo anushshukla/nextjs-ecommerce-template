@@ -34,6 +34,11 @@ export default function RootLayout({
             __html: `
               (function() {
                 console.error = function() { };
+                window.onerror = function(message, source, lineno, colno, error) {
+                  if (typeof message === 'string' && message.indexOf('418') !== -1) return true;
+                  if (error && error.message && error.message.indexOf('418') !== -1) return true;
+                  return false;
+                };
               })();
             `,
           }}
