@@ -41,7 +41,7 @@ const HeroCarousal = () => {
               <a href="#">True Wireless Noise Cancelling Headphone</a>
             </h1>
 
-            <p>
+            <p class="saleOffDescription">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi at ipsum at risus euismod lobortis in
             </p>
 
@@ -82,7 +82,7 @@ const HeroCarousal = () => {
               <a href="#">True Wireless Noise Cancelling Headphone</a>
             </h1>
 
-            <p>
+            <p class="saleOffDescription">
               Lorem ipsum dolor sit, consectetur elit nunc suscipit non ipsum
               nec suscipit.
             </p>
