@@ -10,8 +10,7 @@ import Image from "next/image";
 
 const HeroCarousal = () => {
   return (
-    <div suppressHydrationWarning>
-      <Swiper
+    <Swiper
       spaceBetween={30}
       centeredSlides={true}
       autoplay={{
@@ -107,7 +106,6 @@ const HeroCarousal = () => {
         </div>
       </SwiperSlide>
     </Swiper>
-    </div>
   );
 };
 

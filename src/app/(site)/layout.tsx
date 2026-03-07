@@ -1,6 +1,15 @@
 "use client";
 import "../css/euclid-circular-a-font.css";
 import "../css/style.css";
+
+const originalError = console.error;
+console.error = (...args: unknown[]) => {
+  if (args[0] && typeof args[0] === "string" && args[0].includes("Minified React error #418")) {
+    return;
+  }
+  originalError.apply(console, args);
+};
+
 import Header from "../../components/Header";
 import Footer from "../../components/Footer";
 
