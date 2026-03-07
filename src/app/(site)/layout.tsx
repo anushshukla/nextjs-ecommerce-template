@@ -29,11 +29,6 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning={true}>
       <head>
-        {pathname === "/artemis" && <ArtemisHead />}
-        {pathname === "/abtasty" && <AbtastyHead />}
-        {pathname === "/vwo" && <VwoSyncHead />}
-      </head>
-      <body>
         <script
           dangerouslySetInnerHTML={{
             __html: `
@@ -43,6 +38,11 @@ export default function RootLayout({
             `,
           }}
         />
+        {pathname === "/artemis" && <ArtemisHead />}
+        {pathname === "/abtasty" && <AbtastyHead />}
+        {pathname === "/vwo" && <VwoSyncHead />}
+      </head>
+      <body>
         <ReduxProvider>
           <CartModalProvider>
             <ModalProvider>
