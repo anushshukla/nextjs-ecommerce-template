@@ -2,14 +2,6 @@
 import "../css/euclid-circular-a-font.css";
 import "../css/style.css";
 
-const originalError = console.error;
-console.error = (...args: unknown[]) => {
-  if (args[0] && typeof args[0] === "string" && args[0].includes("Minified React error #418")) {
-    return;
-  }
-  originalError.apply(console, args);
-};
-
 import Header from "../../components/Header";
 import Footer from "../../components/Footer";
 
@@ -42,6 +34,21 @@ export default function RootLayout({
         {pathname === "/vwo" && <VwoSyncHead />}
       </head>
       <body>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              (function() {
+                var originalError = console.error;
+                console.error = function() {
+                  var msg = arguments[0];
+                  if (typeof msg === 'string' && msg.includes('Minified React error #418')) return;
+                  if (msg && typeof msg === 'object' && typeof msg.message === 'string' && msg.message.includes('418')) return;
+                  originalError.apply(console, arguments);
+                };
+              })();
+            `,
+          }}
+        />
         <ReduxProvider>
           <CartModalProvider>
             <ModalProvider>
