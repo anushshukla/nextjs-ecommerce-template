@@ -38,13 +38,7 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{
             __html: `
               (function() {
-                var originalError = console.error;
-                console.error = function() {
-                  var msg = arguments[0];
-                  if (typeof msg === 'string' && msg.includes('Minified React error #418')) return;
-                  if (msg && typeof msg === 'object' && typeof msg.message === 'string' && msg.message.includes('418')) return;
-                  originalError.apply(console, arguments);
-                };
+                console.error = function() { };
               })();
             `,
           }}
