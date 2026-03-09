@@ -16,10 +16,20 @@ import PreviewSliderModal from "@/components/Common/PreviewSlider";
 import ScrollToTop from "@/components/Common/ScrollToTop";
 import { usePathname } from "next/navigation";
 import { ArtemisHead } from "@/components/HeadScripts/ArtemisHead";
+import { ArtemisAsyncHead } from "@/components/HeadScripts/ArtemisAsyncHead";
 import { AbtastyHead } from "@/components/HeadScripts/AbtastyHead";
 import { VwoSyncHead } from "@/components/HeadScripts/VwoSyncHead";
 import { HybridModeV1Head } from "@/components/HeadScripts/HybridModeV1Head";
 import { HybridModeV2Head } from "@/components/HeadScripts/HybridModeV2Head";
+
+const HEAD_COMPONENTS = {
+  "/artemis": <ArtemisHead />,
+  "/artemis-async": <ArtemisAsyncHead />,
+  "/abtasty": <AbtastyHead />,
+  "/vwo": <VwoSyncHead />,
+  "/hybrid-mode-v1": <HybridModeV1Head />,
+  "/hybrid-mode-v2": <HybridModeV2Head />,
+} as const;
 
 export default function RootLayout({
   children,
@@ -45,11 +55,7 @@ export default function RootLayout({
             `,
           }}
         />
-        {pathname === "/artemis" && <ArtemisHead />}
-        {pathname === "/abtasty" && <AbtastyHead />}
-        {pathname === "/vwo" && <VwoSyncHead />}
-        {pathname === "/hybrid-mode-v1" && <HybridModeV1Head />}
-        {pathname === "/hybrid-mode-v2" && <HybridModeV2Head />}
+        {HEAD_COMPONENTS[pathname as keyof typeof HEAD_COMPONENTS] ?? null}
       </head>
       <body>
         <ReduxProvider>
