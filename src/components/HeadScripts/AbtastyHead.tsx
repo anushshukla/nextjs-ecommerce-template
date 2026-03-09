@@ -12,9 +12,7 @@ export function AbtastyHead() {
         }}
       />
       <script
-        id="abtasty-script"
         nonce="456723789323765435"
-        referrerPolicy="no-referrer-when-downgrade"
         src="https://try.abtasty.com/84cd1e2faac83d8b7a70cec0a42ad05e.js"
       />
     </>
