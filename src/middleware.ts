@@ -19,16 +19,39 @@ const BASE_CSP =
     "img-src 'self' data: *.abtasty.com",
   ].join("; ") + ";";
 
+const ARTEMIS_V1_CSP =
+  [
+    // Core default sources
+    "default-src 'self' *.abtasty.com dev.visualwebsiteoptimizer.com",
+    // Script loading (inline + AB Tasty + VWO loader)
+    "script-src 'self' 'unsafe-inline' *.abtasty.com dev.visualwebsiteoptimizer.com",
+    // Frames (no external frames currently required)
+    "frame-src 'self'",
+    // XHR / fetch / beacons
+    "connect-src 'self' *.abtasty.com dev.visualwebsiteoptimizer.com",
+    // Styles (inline + AB Tasty CSS if any)
+    "style-src 'self' 'unsafe-inline' *.abtasty.com",
+    // Fonts + data URLs
+    "font-src 'self' data:",
+    // Images, including data: SVGs and external assets if any
+    "img-src 'self' data: *.abtasty.com dev.visualwebsiteoptimizer.com",
+  ].join("; ") + ";";
+
 export function middleware(req: NextRequest) {
   const res = NextResponse.next();
 
   const isVwoPath =
     req.nextUrl.pathname === "/vwo" || req.nextUrl.pathname === "/vwo-async";
+  const isArtemisV1Path = req.nextUrl.pathname === "/artemis-v1";
   if (isVwoPath) {
     return res;
   }
 
-  res.headers.set("Content-Security-Policy", BASE_CSP);
+  if (isArtemisV1Path) {
+    res.headers.set("Content-Security-Policy", ARTEMIS_V1_CSP);
+  } else {
+    res.headers.set("Content-Security-Policy", BASE_CSP);
+  }
 
   return res;
 }
