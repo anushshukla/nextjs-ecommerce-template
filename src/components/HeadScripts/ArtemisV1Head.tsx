@@ -14,7 +14,7 @@ export function ArtemisV1Head() {
       <script
         id="artemis-v1-loader"
         nonce="456723789323765435"
-        src="/artemis-v1-loader.js"
+        src="https://dacdn.abtasty.com/cloud-run-test/final/artemis-v1-loader.js"
         async
       />
     </>
