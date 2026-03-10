@@ -1,20 +1,20 @@
 import React from "react";
 import { START_TIME_SNIPPET } from "./constants";
 
-export function ArtemisV1Head() {
+export function ArtemisSequentialHead() {
   return (
     <>
       <script
-        id="artemis-v1-start-time"
+        id="artemis-sequential-start-time"
         nonce="456723789323765435"
         dangerouslySetInnerHTML={{
           __html: START_TIME_SNIPPET,
         }}
       />
       <script
-        id="artemis-v1-loader"
+        id="artemis-sequential-loader"
         nonce="456723789323765435"
-        src="/artemis-v1-loader.js"
+        src="/artemis-sequential-loader.js"
         async
       />
     </>

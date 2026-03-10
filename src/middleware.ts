@@ -42,12 +42,13 @@ export function middleware(req: NextRequest) {
 
   const isVwoPath =
     req.nextUrl.pathname === "/vwo" || req.nextUrl.pathname === "/vwo-async";
-  const isArtemisV1Path = req.nextUrl.pathname === "/artemis-v1";
+  const isArtemisSequentialPath =
+    req.nextUrl.pathname === "/artemis-sequential";
   if (isVwoPath) {
     return res;
   }
 
-  if (isArtemisV1Path) {
+  if (isArtemisSequentialPath) {
     res.headers.set("Content-Security-Policy", ARTEMIS_V1_CSP);
   } else {
     res.headers.set("Content-Security-Policy", BASE_CSP);
