@@ -18,6 +18,7 @@ import { usePathname } from "next/navigation";
 import { ArtemisHead } from "@/components/HeadScripts/ArtemisHead";
 import { ArtemisSequentialHead } from "@/components/HeadScripts/ArtemisV1Head";
 import { ArtemisAsyncHead } from "@/components/HeadScripts/ArtemisAsyncHead";
+import { ArtemisInsightsHead } from "@/components/HeadScripts/ArtemisInsightsHead";
 import { AbtastyHead } from "@/components/HeadScripts/AbtastyHead";
 import { VwoSyncHead } from "@/components/HeadScripts/VwoSyncHead";
 import { HybridModeV1Head } from "@/components/HeadScripts/HybridModeV1Head";
@@ -25,6 +26,7 @@ import { HybridModeV2Head } from "@/components/HeadScripts/HybridModeV2Head";
 
 const HEAD_COMPONENTS = {
   "/artemis": <ArtemisHead />,
+  "/artemis-insights": <ArtemisInsightsHead />,
   "/artemis-sequential": <ArtemisSequentialHead />,
   "/artemis-async": <ArtemisAsyncHead />,
   "/abtasty": <AbtastyHead />,
