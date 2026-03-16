@@ -1,6 +1,9 @@
 import React from "react";
 import Script from "next/script";
-import { START_TIME_SNIPPET, VWO_SMARTCODE } from "./constants";
+import {
+  START_TIME_SNIPPET,
+  VWO_SMARTCODE_V3_ASYNC,
+} from "./constants";
 
 export function VwoSc30AsyncHead() {
   return (
@@ -19,7 +22,7 @@ export function VwoSc30AsyncHead() {
         nonce="456723789323765435"
         strategy="beforeInteractive"
         dangerouslySetInnerHTML={{
-          __html: VWO_SMARTCODE,
+          __html: VWO_SMARTCODE_V3_ASYNC,
         }}
       />
     </>

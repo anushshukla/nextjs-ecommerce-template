@@ -15,7 +15,7 @@ export function VwoSc30SyncHead() {
         id="vwo-sc30Code"
         nonce="456723789323765435"
         referrerPolicy="no-referrer-when-downgrade"
-        src="https://dev.visualwebsiteoptimizer.com/lib/1201498.js"
+        src="https://dev.visualwebsiteoptimizer.com/tag/1209051.js"
       />
     </>
   );
