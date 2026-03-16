@@ -41,7 +41,10 @@ export function middleware(req: NextRequest) {
   const res = NextResponse.next();
 
   const isVwoPath =
-    req.nextUrl.pathname === "/vwo" || req.nextUrl.pathname === "/vwo-async";
+    req.nextUrl.pathname === "/vwo" ||
+    req.nextUrl.pathname === "/vwo-async" ||
+    req.nextUrl.pathname === "/vwo-sc30-sync" ||
+    req.nextUrl.pathname === "/vwo-sc30-async";
   const isArtemisSequentialPath =
     req.nextUrl.pathname === "/artemis-sequential";
   if (isVwoPath) {

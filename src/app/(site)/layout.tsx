@@ -22,6 +22,8 @@ import { ArtemisAsyncV3Head } from "@/components/HeadScripts/ArtemisAsyncV3Head"
 import { ArtemisInsightsHead } from "@/components/HeadScripts/ArtemisInsightsHead";
 import { AbtastyHead } from "@/components/HeadScripts/AbtastyHead";
 import { VwoSyncHead } from "@/components/HeadScripts/VwoSyncHead";
+import { VwoSc30SyncHead } from "@/components/HeadScripts/VwoSc30SyncHead";
+import { VwoSc30AsyncHead } from "@/components/HeadScripts/VwoSc30AsyncHead";
 import { HybridModeV1Head } from "@/components/HeadScripts/HybridModeV1Head";
 import { HybridModeV2Head } from "@/components/HeadScripts/HybridModeV2Head";
 
@@ -33,6 +35,8 @@ const HEAD_COMPONENTS = {
   "/artemis-async-v3": <ArtemisAsyncV3Head />,
   "/abtasty": <AbtastyHead />,
   "/vwo": <VwoSyncHead />,
+  "/vwo-sc30-sync": <VwoSc30SyncHead />,
+  "/vwo-sc30-async": <VwoSc30AsyncHead />,
   "/hybrid-mode-v1": <HybridModeV1Head />,
   "/hybrid-mode-v2": <HybridModeV2Head />,
 } as const;
