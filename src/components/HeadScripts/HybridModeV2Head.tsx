@@ -13,7 +13,7 @@ export function HybridModeV2Head() {
       />
       <script
         nonce="456723789323765435"
-        src="https://dacdn.abtasty.com/cloud-run-test/final/4001336.js"
+        src="https://dev.visualwebsiteoptimizer.com/tag/1212794.js"
       />
     </>
   );
