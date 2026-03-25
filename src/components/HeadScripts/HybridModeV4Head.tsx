@@ -1,11 +1,11 @@
 import React from "react";
 import { START_TIME_SNIPPET } from "./constants";
 
-export function HybridModeV3Head() {
+export function HybridModeV4Head() {
   return (
     <>
       <script
-        id="hybrid-mode-v3-start-time"
+        id="hybrid-mode-v4-start-time"
         nonce="456723789323765435"
         dangerouslySetInnerHTML={{
           __html: START_TIME_SNIPPET,
@@ -13,7 +13,7 @@ export function HybridModeV3Head() {
       />
       <script
         nonce="456723789323765435"
-        src="https://dev.visualwebsiteoptimizer.com/tag/1213133.prebuild.js"
+        src="https://dev.visualwebsiteoptimizer.com/tag/1213136.js"
       />
     </>
   );
