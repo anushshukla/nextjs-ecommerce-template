@@ -28,6 +28,8 @@ import { HybridModeV1Head } from "@/components/HeadScripts/HybridModeV1Head";
 import { HybridModeV2Head } from "@/components/HeadScripts/HybridModeV2Head";
 import { HybridModeV3Head } from "@/components/HeadScripts/HybridModeV3Head";
 import { HybridModeV4Head } from "@/components/HeadScripts/HybridModeV4Head";
+import { PerfVwoSyncHead } from "@/components/HeadScripts/PerfVwoSyncHead";
+import { PerfVwoV2Head } from "@/components/HeadScripts/PerfVwoV2Head";
 
 const HEAD_COMPONENTS = {
   "/artemis": <ArtemisHead />,
@@ -43,6 +45,8 @@ const HEAD_COMPONENTS = {
   "/hybrid-mode-v2": <HybridModeV2Head />,
   "/hybrid-mode-v3": <HybridModeV3Head />,
   "/hybrid-mode-v4": <HybridModeV4Head />,
+  "/perf-vwo-sync": <PerfVwoSyncHead />,
+  "/perf-vwo-v2": <PerfVwoV2Head />,
 } as const;
 
 export default function RootLayout({
