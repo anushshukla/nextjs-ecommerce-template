@@ -26,6 +26,7 @@ import { VwoSc30SyncHead } from "@/components/HeadScripts/VwoSc30SyncHead";
 import { VwoSc30AsyncHead } from "@/components/HeadScripts/VwoSc30AsyncHead";
 import { HybridModeV1Head } from "@/components/HeadScripts/HybridModeV1Head";
 import { HybridModeV2Head } from "@/components/HeadScripts/HybridModeV2Head";
+import { HybridModeV3Head } from "@/components/HeadScripts/HybridModeV3Head";
 
 const HEAD_COMPONENTS = {
   "/artemis": <ArtemisHead />,
@@ -39,6 +40,7 @@ const HEAD_COMPONENTS = {
   "/vwo-sc30-async": <VwoSc30AsyncHead />,
   "/hybrid-mode-v1": <HybridModeV1Head />,
   "/hybrid-mode-v2": <HybridModeV2Head />,
+  "/hybrid-mode-v3": <HybridModeV3Head />,
 } as const;
 
 export default function RootLayout({
