@@ -13,7 +13,7 @@ export function HybridModeV4Head() {
       />
       <script
         nonce="456723789323765435"
-        src="https://dev.visualwebsiteoptimizer.com/tag/1213136.js"
+        src="https://dev.visualwebsiteoptimizer.com/tag/1213133.js"
       />
     </>
   );
