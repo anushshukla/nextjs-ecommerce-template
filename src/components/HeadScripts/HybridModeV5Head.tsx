@@ -1,0 +1,26 @@
+import React from "react";
+import { START_TIME_SNIPPET } from "./constants";
+
+export function HybridModeV5Head() {
+  return (
+    <>
+      <script
+        id="hybrid-mode-v5-start-time"
+        nonce="456723789323765435"
+        dangerouslySetInnerHTML={{
+          __html: START_TIME_SNIPPET,
+        }}
+      />
+      <script
+        nonce="456723789323765435"
+        src="https://try.abtasty.com/7128a6af58894672880ead077964b952.js"
+      />
+      <script
+        id="vwoCode"
+        nonce="456723789323765435"
+        referrerPolicy="no-referrer-when-downgrade"
+        src="https://dev.visualwebsiteoptimizer.com/cloud-run-test/final/3000465.js"
+      />
+    </>
+  );
+}
