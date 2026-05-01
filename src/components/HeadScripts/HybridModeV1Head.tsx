@@ -15,6 +15,12 @@ export function HybridModeV1Head() {
         nonce="456723789323765435"
         src="https://try.abtasty.com/7128a6af58894672880ead077964b952.js"
       />
+      <script
+        id="vwoCode"
+        nonce="456723789323765435"
+        referrerPolicy="no-referrer-when-downgrade"
+        src="https://dev.visualwebsiteoptimizer.com/cloud-run-test/final/3000546.js"
+      />
     </>
   );
 }
