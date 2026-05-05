@@ -13,7 +13,7 @@ export function HybridModeV1Head() {
       />
       <script
         nonce="456723789323765435"
-        src="https://try.abtasty.com/7128a6af58894672880ead077964b952.js"
+        src="https://try.abtasty.com/84cd1e2faac83d8b7a70cec0a42ad05e.js"
       />
       <script
         id="vwoCode"
