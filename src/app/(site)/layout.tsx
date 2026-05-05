@@ -29,7 +29,7 @@ import { HybridModeV2Head } from "@/components/HeadScripts/HybridModeV2Head";
 import { HybridModeV3Head } from "@/components/HeadScripts/HybridModeV3Head";
 import { HybridModeV4Head } from "@/components/HeadScripts/HybridModeV4Head";
 import { HybridModeV5Head } from "@/components/HeadScripts/HybridModeV5Head";
-import { HybridModeV6Head } from "@/components/HeadScripts/HybridModeV6Head";
+import { HybridModeHead } from "@/components/HeadScripts/HybridModeHead";
 import { PerfVwoSyncHead } from "@/components/HeadScripts/PerfVwoSyncHead";
 import { PerfVwoV2Head } from "@/components/HeadScripts/PerfVwoV2Head";
 
@@ -48,7 +48,7 @@ const HEAD_COMPONENTS = {
   "/hybrid-mode-v3": <HybridModeV3Head />,
   "/hybrid-mode-v4": <HybridModeV4Head />,
   "/hybrid-mode-v5": <HybridModeV5Head />,
-  "/hybrid-mode-v6": <HybridModeV6Head />,
+  "/hybrid-mode": <HybridModeHead />,
   "/perf-vwo-sync": <PerfVwoSyncHead />,
   "/perf-vwo-v2": <PerfVwoV2Head />,
 } as const;
